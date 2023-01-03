@@ -101,15 +101,15 @@ We process raw data for **Tenrec-QK** dataset based on the following strategy:
 
       python model-code/pretrain/quick_start.py --model MF --learning_rate 0.01 --embedding_size 128 --weight_decay 0.000001 --optimizer_type adam --init normal --data_type 'QB' --data_domain 'target' --beta 0.3 --use_tensorboard --use_gpu --gpu_id 0 --log --saved
   ```
-3. Train the FairCDR without weights to init the model.
+4. Train the FairCDR without weights to init the model.
   ```shell
       python model-code/faircdr/quick_start.py --learning_rate 0.01 -bs 128 --simK 3 --gamma 1.0 --tau 1.0 --lamb 0.5 --alpha 1.0 --weight_decay 0.000001 --optimizer_type adam --init normal --data_type 'QB' --beta 0.3 --use_tensorboard --use_gpu --gpu_id 0 --log --saved --source_id your_source_id --target_id your_target_id --pretrain_model MF 
   ```
-4. Calculate the influence scores for CDR data with model trained in 3.
+5. Calculate the influence scores for CDR data with model trained in 4.
   ```shell
       python model-code/calculate-weight/quick_start.py --data_type 'QB' --beta 0.3 --damp 0.01 --scale 25 --batch_size 128 --recursion_depth 1000 --faircdr_id your_faircdr_id --use_gpu --gpu_id 0 --pretrain_model MF
   ```
-5. Retrain the FairCDR with IF-based reweights
+6. Retrain the FairCDR with IF-based reweights
   ```shell
       python model-code/faircdr/quick_start.py --learning_rate 0.01 -bs 128 --simK 3 --gamma 1.0 --tau 1.0 --lamb 0.5 --alpha 1.0 --weight_decay 0.000001 --optimizer_type adam --init normal --data_type 'QB' --beta 0.3 --use_tensorboard --use_gpu --gpu_id 0 --log --saved --source_id your_source_id --target_id your_target_id --pretrain_model MF --weight_method IF --damp 0.01 --scale 25 --batch_size 128 --recursion_depth 1000
   ```
