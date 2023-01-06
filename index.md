@@ -75,7 +75,7 @@ We process raw data for **Tenrec-QK** dataset based on the following strategy:
 # 5. Main Results
 
 <center>Table 2: Overall comparison between the baselines and our models.</center>
-<div align=center><img src='./assets/figs/overall.jpg'/></div>
+<div align=center><img src='./assets/figs/overall.png'/></div>
 
 # 6. Code Description
 
