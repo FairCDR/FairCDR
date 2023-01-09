@@ -70,7 +70,7 @@ We process raw data for **Tenrec-QK** dataset based on the following strategy:
 
 # 4. DownLoad
 
-[Datasets and Code](https://drive.google.com/drive/folders/1tuYQWqBrA2zVhE8NKvHo3dRjeuOei2GX?usp=share_link)
+[Datasets and Code](https://drive.google.com/file/d/16yCh9DgzUKO3hnqRDdYTP0FFVmZar8pB/view?usp=sharing)
 
 # 5. Main Results
 
